@@ -1,0 +1,49 @@
+<div class="container">
+  <div
+    class="row d-flex justify-content-center align-content-center"
+    style="height: 100vh"
+  >
+    <div class="col-md-6 text-center">
+      <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="flage">
+        To Do Added to the list.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <h3 class="p-3 text-white" style="background-color: #008cba">
+        <a href="http://" id="backButton" routerLink="/">
+          <i class="fas fa-arrow-left"></i
+        ></a>
+        Add To Do
+      </h3>
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <form>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Todo</span>
+              <input
+                type="text"
+                name="basic-addon1"
+                class="form-control"
+                placeholder="Add to do"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                [(ngModel)]="toDoTaskTitle"
+
+
+              />
+            </div>
+
+            <div class="col-md-12">
+              <button
+                class="btn btn-outline-primary"
+                (click)="addToDoTask()"
+                title="Add To Do Item"
+              >
+                Add To Do
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
